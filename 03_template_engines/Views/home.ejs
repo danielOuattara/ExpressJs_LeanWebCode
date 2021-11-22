@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to home page</h1>
+
+        <h2> What is the color of the sky in a clear day ? </h2>
+
+        <form action="/result" method="POST">
+            <label for='name'> Color of the sky ? :&nbsp;
+                <input type='text' name='color' /></br>
+                <input type='submit' value=' Submit Answer ' />
+            </label>
+        </form>
+
+        <p>Hello <%= isRaining %> </p>
+ 
+        <!-- Entering ejs for full JS -->
+        <% 
+            if(isRaining) {
+
+            } else {
+
+            } 
+        %> 
+
+        <!-- Entering ejs for partial JS -->
+        <% if(isRaining) { %>
+            <p>It is raining</p> 
+        <%}else{ %> 
+            <p>It is not raining</p>
+        <% } %> 
+
+        <!-- Looping through array of vegetables -->
+        <ul>
+            <%  fruits.forEach(item => { %>
+                    <li><%=item.name%> ( shape: <%= item.shape %>)</li>
+            <% }) %> 
+        </ul>
+</body>
+</html>
